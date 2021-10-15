@@ -5,7 +5,7 @@ body {
 h1 {
     color: rgba(8, 141, 165, 1);
     margin-left: 10px;
-    text-shadow: 1px, .5px, 4px rgba(0, 0, 0, 0.6);
+    text-shadow: 1px .5px 4px rgba(0, 0, 0, 0.6);
 }
 
 .container {
@@ -22,7 +22,7 @@ SELECT ALL SQUARES IN THE ARRAY
 --------------------------------------------------------------*/
 
 .container .squares:nth-child(-n+4) {
-    background-image: url("../images/icons/Smiley_Face2.png");
+    background-image: url("./images/icons/smiley_face2.png");
     color: #fff;
     float: left;
     width: 100px;
@@ -75,7 +75,7 @@ HOVER EFFECTS
 -------------------------------------------------------------*/
 
 .container .squares:nth-child(-n+4):hover {
-    background-image: url ("../images/icons/Smiley_Face1.png");
+    background-image: url ("./images/icons/smiley_face1.png");
 }
 
 .squares:nth-child(1):hover {
@@ -100,7 +100,7 @@ HOVER, TRANSLATE & TRANSFORM EFFECTS
 -------------------------------------------------------------*/
 
 .container .squares:nth-child(-n+4):hover {
-    background-image: url("../images/icons/smiley_face1.png");
+    background-image: url("./images/icons/smiley_face1.png");
     transform: scale(.5);
     animation-name: race;
     animation-duration: 2.5s;

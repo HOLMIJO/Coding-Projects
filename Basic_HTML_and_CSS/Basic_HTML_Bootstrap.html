@@ -37,6 +37,36 @@
           text-align:center;
       }
 
+      /* The navigation bar */
+      .navbar {
+        overflow: hidden;
+        background-color: rgb(2, 2, 2);
+        position: fixed; /* Set the navbar to fixed position */
+        top: 0; /* Position the navbar at the top of the page */
+        width: 100%; /* Full width */
+      }
+
+      /* Links inside the navbar */
+      .navbar a {
+        float: left;
+        display: block;
+        color: #fcfcfc;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      /* Change background on mouse-over */
+      .navbar a:hover {
+        background: #ddd;
+        color: rgb(99, 94, 94);
+      }
+
+      /* Main content */
+      .main {
+        margin-top: 30px; /* Add a top margin to avoid content overlay */
+      }
+
       img {
           filter: drop-shadow(25px 25px 25px gray);
       }
@@ -125,7 +155,19 @@
       }
 
 
+
       </style>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      
+      <div class="main">
+        <p>There's more here than meets the eye!</p>
+      </div>
+      <br>
+      <br>
       <div class="container">
       
     <img src="./images/pexels-chevanon-photography-325044.jpg" alt="Red Fish" height="250" width="400" class="rounded-corners"/>
@@ -134,8 +176,9 @@
 </div>
     </head>
   <body>
-  
+      
 </div>
+    <br>
     <h1>Hello, World!</h1>
     <p style="text-align:center;"></p>
     <div class="container">
@@ -148,7 +191,8 @@
           </div>
         </div>
     </div>
-
+    <br>
+    <br>
     <h2>This is a new Headline</h2>
     <h3>This is where the words start:</h3>
     <p>I do not like green eggs and ham.</p>
@@ -186,10 +230,14 @@
     <td>(901)867-5309</td>
   </tr>
 </table>
-   
+   <br>
+   <br>
+
+  
    <footer>
+     
         <p class="thick">Authored by: Joseph Holmin</p>
-        <center>Email me at HolminJ@iCloud.com<link a href="mailto:holminj@icloud.com"></a></center>
+        <center>Email me at <button><a href="mailto:holminj@icloud.com"</button>HolminJ@iCloud.com<link a href="mailto:holminj@icloud.com"></a></center>
         <br>
         <p class="thick">Copyrighted&copy 2021</p>
     </footer>

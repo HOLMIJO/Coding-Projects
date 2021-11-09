@@ -1,68 +1,148 @@
 <!DOCTYPE html>
 <html>
 <meta lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>ALL ABOUT DOGS...</title>
-<link rel="stylesheet" href="./css/one_page_website.css">
-<link rel="stylesheet" a href="css/bootstrap.css"/>
-<script src="js/bootstrap.js/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>ALL ABOUT DOGS...</title>
+    <link rel="stylesheet" href="./css/one_page_website.css">
+    <link rel="stylesheet" a href="css/bootstrap.css" />
+    <script src="js/bootstrap.js" defer></script>
+    <script src="js/one_page_website.js" defer></script>
+
 </head>
+
 <body>
-<!-- NAV -->
-        <ul class="menu">
-            <a href="#home"><li>HOME</li></a>
-            <a href="#gallery"><li>GALLERY</li></a>
-            <a href="#contact"><li>CONTACT</li></a>
-            <a href="#videos"><li>VIDEOS</li></a>
-        </ul>
-<!-- End NAV -->
+    <!-- NAV -->
+    <ul class=" menu ">
+        <a href="#home ">
+            <li>HOME</li>
+        </a>
+        <a href="#gallery ">
+            <li>GALLERY</li>
+        </a>
+        <a href="#contact ">
+            <li>CONTACT</li>
+        </a>
+        <a href="#videos ">
+            <li>VIDEOS</li>
+        </a>
+    </ul>
+    <!-- End NAV -->
     <h1>All About Dogs...</h1>
     <h3>This site is dedicated to dogs of all kinds!</h3>
     <p>Look around and enjoy yourself!</p>
-    
-    <!-- GALLERY -->
-        <h1>Gallery</h1>
-        <section id="gallery">
-                    <img src="./images/thumbs/thumb1.png" alt="Brown and tan puppy">
-                        <p>This pup is likely a Beagle mix!</p>
-        
-            
-                    <img src="./images/thumbs/thumb2.png" alt="A Pug laying on it's belly">
-                        <p>This is a Pug puppy lying on its belly!</p>
-                    
-                    <img src="./images/thumbs/thumb3.png" alt="A Pit Bull Dog">
-                        <p>This is an adult Pit Bull Dog!</p>
-                    
-                    <img src="./images/thumbs/thumb4.png" alt="A Pug dog with sad face">
-                        <p>This is a Pug puppy with a sad face!</p>
-        </section>
-        <!-- End GALLERY-->
 
-        <!-- CONTACT FORM-->
-        <!-- contact -->
-<section id="contact">
-    <div class="container">
-  <form action="" method="post">
-
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your First name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your Last name..">
-    <label for="lname">Last Name</label>
-    <input type="email" id="email" name="email" placeholder="Your Email Address..">
-    <input type="submit" value="Submit">
-
-  </form>
-
+    <!-- Images used to open the lightbox -->
+    <div class="row">
+        <div class="column">
+            <img src="images/thumbs/thumb1.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/thumbs/thumb2.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/thumbs/thumb3.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
+        <div class="column">
+            <img src="images/thumbs/thumb4.png" onclick="openModal();currentSlide(1)" class="hover-shadow">
+        </div>
     </div>
-</section>
 
-<!-- End Contact -->
-<!-- End Form-->
+    <!-- The Modal/Lightbox -->
+    <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
 
-<!-- Begin Videos -->
+            <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="images/thumbs/thumb1.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="images/thumbs/thumb2.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="images/thumbs/thumb3.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="images/thumbs/thumb4.png" style="width:100%">
+            </div>
+
+            <!-- Next/previous controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            <!-- Caption text -->
+            <div class="caption-container">
+                <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls -->
+            <div class="column">
+                <img class="demo" src="images/thumbs/thumb1.png" onclick="currentSlide(1)" alt="Brown and tan puppy">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/thumbs/thumb2.png" onclick="currentSlide(2)" alt="A Pug lying on its belly">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/thumbs/thumb3.png" onclick="currentSlide(3)" alt="A Pit Bull Dog">
+            </div>
+
+            <div class="column">
+                <img class="demo" src="images/thumbs/thumb4.png" onclick="currentSlide(4)" alt="A Pug dog with sad face">
+            </div>
+        </div>
+    </div>
+    <!-- GALLERY -->
+    <h1>Gallery</h1>
+    <section id="gallery ">
+        <img src="./images/thumbs/thumb1.png " alt="Brown and tan puppy ">
+        <p>This pup is likely a Beagle mix!</p>
+
+
+        <img src="./images/thumbs/thumb2.png " alt="A Pug laying on it 's belly">
+        <p>This is a Pug puppy lying on its belly!</p>
+
+        <img src="./images/thumbs/thumb3.png" alt="A Pit Bull Dog">
+        <p>This is an adult Pit Bull Dog!</p>
+
+        <img src="./images/thumbs/thumb4.png" alt="A Pug dog with sad face">
+        <p>This is a Pug puppy with a sad face!</p>
+    </section>
+    <!-- End GALLERY-->
+
+    <!-- CONTACT FORM-->
+    <!-- contact -->
+    <section id="contact">
+        <div class="container">
+            <form action="" method="post">
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your First name..">
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your Last name..">
+                <label for="lname">Last Name</label>
+                <input type="email" id="email" name="email" placeholder="Your Email Address..">
+                <input type="submit" value="Submit">
+
+            </form>
+
+        </div>
+    </section>
+
+    <!-- End Contact -->
+    <!-- End Form-->
+
+    <!-- Begin Videos -->
     <section id="videos">
         <h1>Funny Dog Videos</h1>
         <p>For your viewing pleasure</p>
@@ -70,16 +150,14 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/UwipvPhilHc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
 
-<!-- End Videos -->
+    <!-- End Videos -->
 
-<!-- FOOTER -->
-<div id="footer">
-    www.allaboutdogs.net &nbsp;|&nbsp; &copy; 2021
-</div>
-<!-- End FOOTER -->
+    <!-- FOOTER -->
+    <div id="footer">
+        www.allaboutdogs.net &nbsp;|&nbsp; &copy; 2021
+    </div>
+    <!-- End FOOTER -->
 
-    </body>
+</body>
 
 </html>
-
-    

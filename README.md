@@ -6,6 +6,7 @@ This is a display of sample websites that I made using HTML and CSS.
 <ul><b>Projects</b>
   <li>Space Station Site</li>
   <li>Movie Theater Site</li>
+  <li>Portfolio Site</li>
   </ul>
   
   <b>Space Station Site</b>
